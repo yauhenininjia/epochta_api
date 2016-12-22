@@ -1,6 +1,6 @@
 module EPochtaService
 	class EPochtaSMS < EPochtaBase
-		URL = 'http://api.atompark.com/sms/3.0/'
+		URL = 'http://api.myatompark.com/sms/3.0/'
 
 		def create_address_book(params)
 			params['action'] = 'addAddressbook'
@@ -59,7 +59,7 @@ module EPochtaService
 			if result.has_key? 'error'			
 				false
 			else
-				result['result']['id']
+				result['result']
 			end
 		end
 
